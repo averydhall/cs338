@@ -1,3 +1,3 @@
 Avery Hall
 
-For now, I will use Kali on the classroom lab computers (my personal Mac is not updated enough to download VMWare).
+For now, I will use Kali on the classroom lab computers (my personal Mac is not updated enough to download VMWare, and I am apprehensive about how updating might affect its performance).
