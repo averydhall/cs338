@@ -1,10 +1,17 @@
 1. ifconfig   (mine is 10.133.6.82)
+SOURCE: https://www.cyberciti.biz/faq/bash-shell-command-to-find-get-ip-address/
 2. grep `hostname` /etc/hosts
+SOURCE: https://www.java67.com/2012/12/unix-command-to-find-ip-address-from-hostname.html
 3. nslookup <ip>
+SOURCE: https://linux.die.net/man/1/nslookup
 4. scp [options] username1@source_host:directory1/filename1 username2@destination_host:directory2/filename2
+SOURCE: https://linux.die.net/man/1/scp
 5. lsof -i:<port> (see note)
+SOURCE: https://www.tecmint.com/find-out-which-process-listening-on-a-particular-port/
 6. lsof -i -P -n | grep LISTEN (see note)
-(note: for 5 and 6, the following should work as well for an *explicitly* given host: nc -z <host> <port(s)> however, nc is not currently working on my version of linux).
+SOURCES: https://www.tecmint.com/find-out-which-process-listening-on-a-particular-port/
+(note: for 5 and 6, the following should work as well for an *explicitly* given host: nc -z <host> <port(s)> however, nc is not currently working on my version of linux. SOURCE: https://www.tutorialspoint.com/unix_commands/nc.htm)
 7. curl <website> -o <filename>
 8. curl -I <website>
 9. curl -v <website>  (gives verbose ouptut; lines that start with > indicate outgoing headers, as opposed to < for incoming)
+SOURCE FOR 7-9: https://www.mit.edu/afs.new/sipb/user/ssen/src/curl-7.11.1/docs/curl.html
