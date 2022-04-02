@@ -5,7 +5,7 @@ SOURCE: https://www.java67.com/2012/12/unix-command-to-find-ip-address-from-host
 3. nslookup <ip>
 SOURCE: https://linux.die.net/man/1/nslookup
 4. scp [options] username1@source_host:directory1/filename1 username2@destination_host:directory2/filename2
-SOURCE: https://linux.die.net/man/1/scp
+SOURCE: https://kb.iu.edu/d/agye
 5. lsof -i:<port> (see note)
 SOURCE: https://www.tecmint.com/find-out-which-process-listening-on-a-particular-port/
 6. lsof -i -P -n | grep LISTEN (see note)
