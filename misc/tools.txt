@@ -1,3 +1,5 @@
+Avery Hall
+
 1. ifconfig   (mine is 10.133.6.82)
 SOURCE: https://www.cyberciti.biz/faq/bash-shell-command-to-find-get-ip-address/
 2. grep `hostname` /etc/hosts
