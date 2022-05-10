@@ -1,0 +1,7 @@
+Part 1
+Total time: 
+Number of hashes computed: 
+Passwords cracked: 
+Time per hash computed: 
+Time per password cracked: 
+Passwords cracked per number of hashes computed: 
