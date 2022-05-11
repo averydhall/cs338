@@ -1,0 +1,58 @@
+Part 1
+Total time: 2m3.116s
+Number of hashes computed: 267733 hashes
+Passwords cracked: 2805 passwords
+Time per hash computed: 0.00045984619 seconds per hash
+Time per password cracked: 22.7833913 seconds per password
+Passwords cracked per number of hashes computed: 0.01047685567 passwords per hash
+
+Part 2
+Total time: 84m5.538s
+Number of hashes computed: 107250692
+Passwords cracked: 2
+Time per hash computed: 4.7078251e-5 seconds per hash
+Time per password cracked: 2524.5875 seconds per password
+Passwords cracked per number of hashes computed: 1.86478983e-8 passwords per hash
+
+Part 3
+Total time: 23m9.175s
+Number of hashes computed: 750991065 hashes
+Passwords cracked: 2804 passwords
+Time per hash computed: 1.84978899e-6 seconds per hash
+Time per password cracked: 0.495426177 seconds per password
+Passwords cracked per number of hashes computed: 3.73373284e-6 passwords per hash
+Note: We weren't able to crack the password for [ohrstroma] for some reason,
+which resulted in us cracking only 2804 out of the 2805 passwords
+
+- Did your time per hash computed change between phases? By what factor? Why?
+The time per hash decreased by a factor of 10 between parts 1 and 2. Between parts 1 and 3,
+the time per hash decreased by a factor of 250. We are not quite sure why this is because
+in theory, part 1 has the simplest passwords, and should therefore require the least
+amount of time to be hashed.
+
+- Did your time per password crack change between phases? By what factor? Why?
+Yes, the time per password crack increased dramatically between parts 1 and 2 by a factor of 100
+, and the time per password crack went down between parts 1 and 3 by a factor of 0.02. While the
+time increasing for part 2 makes sense to us, as part 2 requires a greater computational complexity,
+the decrease in time between parts 1 and 3 does not make much sense. We believe that theoretically,
+adding a salt into the password cracking process should increase the time, as the hashing process
+should take slightly longer when hashing a concatenation of password and salt instead of just password.
+
+- Give 3-4 reasons we should store password hashes and not the passwords themselves.
+Think in terms of threats, who the attackers might be, etc.
+
+The first reason to store hashes of passwords is so that the client can hash the password before
+sending it over an insecure network. Even if an attacker were to eavesdrop on the network communications
+from the client, if the client had hashed their password with a salt before sending it to the server,
+the eavesdropper would be likely unable to determine the password from the information they have access to (hashes
+are preimage resistant). This way, the server can safely verify that the user has sent the correct password by comparing the received hash
+with the hash in the server's database.
+Another reason is in order to reduce risk from an attacker who may have access to a database of password/password hashes.
+If the attacker is, for example, an employee of a company and has access to the database,
+it would be much safer to store hashes of passwords instead of passwords themselves so that
+the employee could not simply identify the plaintext password associated with any given user (and break into the account).
+A third reason, similar to the second, deals with the same threat from a different type of attacker. A third party that has no 
+association with the organization storing user data (and thus no special priveleges) might try to steal passwords through, for example,
+an SQL injection attack. Even if the website was for some reason still susceptible to an SQL injection attack in 2022, the most that 
+the attacker could glean would be usernames, salts, and hashed passwords. This still leaves a lot of difficult calculation to the attacker 
+to get the password itself, and thus have access to account(s).
