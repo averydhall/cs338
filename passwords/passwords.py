@@ -57,6 +57,9 @@ print("Passwords cracked: " + str(passwords_cracked))
 # print("Hashes computed: " + str(hashes_computed))
 
 
+#For Part 3
+# --------------------------------------
+
 # file3 = open("cracked3.txt", "a")
 # passwords_cracked = 0
 # hashes_computed = 0
